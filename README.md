@@ -1,2 +1,1 @@
-# sample.github.io
 
