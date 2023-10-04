@@ -49,7 +49,7 @@ function reset(){
     // 変数、表示を初期化
     elapsedTime = 0;
     holdTime = 0;
-    showTime.textContent = "00:00:000";
+    showTime.textContent = "00:00:00:0";
 
     startButton.disabled = false;
     stopButton.disabled = true;
@@ -62,7 +62,7 @@ function measureTime() {
     timer = setTimeout(function () {
         // 経過時間を設定し、画面へ表示
         elapsedTime = Date.now() - startTime + holdTime;
-        showTime.textContent = new Date(elapsedTime).toISOString().slice(14, 23);
+        showTime.textContent = new Date(elapsedTime).toISOString().slice(11, 21);
         
         // 関数を呼び出し、時間計測を継続する
         measureTime();
